@@ -8,3 +8,6 @@ to run the frontend:
 2) npm install --global yarn
 3) yarn install
 4) yarn start
+
+Also dont forget to pip install -r requirements.txt
+
