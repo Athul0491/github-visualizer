@@ -1,38 +1,157 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+::selection {
+  color: #000;
+  background: #fff;
+}
+/* nav {
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+.menu ul {
+  display: inline-flex;
+}
+.menu ul li {
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child {
+  margin-left: 0px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu ul li a:hover {
+  background: #fff;
+  color: black;
+} */
+
+.center {
+  margin-top: 25vh;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.center .title {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.center .sub_title {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
 }
+.center .form .btns {
+  margin-top: 20px;
+}
+.center .form .btns button {
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.center .form .btns input {
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.center .form .btns button {
+  color: #fff;
+  background: none;
+}
+/* .center .btns input {
+  color: #fff;
+  background: none;
+} */
+.center .form .btns button:hover {
+  background: white;
+  color: black;
+}
+.center .form .btns input:hover {
+  background: white;
+  color: black;
+}
+/* .btns input:hover {
+  background: white;
+  color: black; 
+} */
+/* .center .btns button:last-child {
+  background: white;
+  color: black;
+} */
+.center .form .btns input {
+  background: #080c24;
+  color: #fff;
+}
+.center .form .btns input:focus {
+  background: white;
+  color: #000000;
+}
+.center .form .btns input::-webkit-input-placeholder {
+  text-align: center;
+  color: #fff;
+}
+.center .form .btns input:focus::-webkit-input-placeholder {
+  text-align: center;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: #000000;
+  background: white;
+}
+.center .form .btns input ::-webkit-input-placeholder {
+  text-align: center;
+  background: white;
+}
+body {
+  background: #080c24;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  position: relative;
 }

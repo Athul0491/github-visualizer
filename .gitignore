@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/src/component/githubData/githubData.js
+/src/component/githubData/list.js
+/src/component/githubData/todo.js
