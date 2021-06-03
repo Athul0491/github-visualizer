@@ -3,23 +3,26 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Data = () => {
+// kaunsa code?
+// v
+const Data = ({ username, repository }) => {
   const [git_data, setGit_data] = useState({});
 
   useEffect(() => {
     axios
-      .get('http://127.0.0.1:5000/github', username, repository)
+      .post(`http://127.0.0.1:5000/github`, [username, repository])
       .then(res => {
-        const git_data = res.data;
-        setGit_data(git_data);
+        console.log(res.data);
+        setGit_data(res.data);
       });
   }, []);
 
   return (
     <div>
-      {this.state.git_data.map(git_data => (
+      <h1>Hello world</h1>
+      {/* {git_data.map(git_data => (
         <li>{git_data.name}</li>
-      ))}
+      ))} */}
     </div>
   );
 };

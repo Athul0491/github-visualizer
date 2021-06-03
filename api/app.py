@@ -1,9 +1,11 @@
 from flask import Flask
+import flask
 from flask import request, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import requests
 import json
-
+# 
+# 
 app = Flask(__name__)
 CORS(app)
 token = "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"
@@ -13,9 +15,19 @@ headers = {
 }
 BASE_URL = "https://api.github.com"
 
-
-@app.route("/github/<username>/<repo>",methods=["GET"])
-def github(username, repo):
+#  chal fir good night!
+# goodnight!
+@app.route("/github",methods=["GET", "POST"])
+@cross_origin()  
+def github():
+    json_data = flask.request.json
+    print(json_data)
+    if json_data != None:
+        username = str(json_data[0])
+        repo = str(json_data[1])
+    else:
+        return jsonify({"Athul": "Loves React"}) 
+        # LMFAO
     r = requests.get(BASE_URL + f"/repos/{username}/{repo}",headers=headers).json()
     # value of r
     # {
@@ -152,3 +164,6 @@ def github(username, repo):
     data['url'] = r['url']
     data['success'] = True
     return jsonify(data)
+
+if __name__ == '__main__':
+    app.run()

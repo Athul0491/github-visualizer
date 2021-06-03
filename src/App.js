@@ -1,9 +1,10 @@
-import "./App.css";
-import List from "./component/githubData/list";
-import Visualize from "./component/githubData/visualize/visualize";
+/** @format */
+
+import './App.css';
+import Visualize from './component/githubData/visualize/Visualize';
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Visualize />
     </div>
   );
