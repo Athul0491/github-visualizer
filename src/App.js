@@ -1,5 +1,4 @@
 import "./App.css";
-import List from "./component/githubData/list";
 import Visualize from "./component/githubData/visualize/visualize";
 function App() {
   return (
